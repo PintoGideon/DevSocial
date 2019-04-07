@@ -14,15 +14,15 @@ module.exports = function validateEducationInput(data) {
 
 	data.from = !isEmpty(data.from) ? data.from : '';
 
-	if (!Validator.isEmpty(data.school)) {
-		errors.title = 'Shcool Title is invalid';
+	if (Validator.isEmpty(data.school)) {
+		errors.title = 'School Title is invalid';
 	}
 	if (Validator.isEmpty(data.degree)) {
 		errors.degree = 'Degree is required';
-    }
-    
-    if (Validator.isfieldofstudy(data.fieldofstudy)) {
-		errors.fieldofstudy = 'Degree is required';
+	}
+
+	if (Validator.isEmpty(data.fieldofstudy)) {
+		errors.fieldofstudy = 'Field of Study is required';
 	}
 
 	if (Validator.isEmpty(data.from)) {
