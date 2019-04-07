@@ -1,10 +1,10 @@
 # Dev Social, A Social Networking App
 
 # Building blocks for each components
+
+![flow-1](https://user-images.githubusercontent.com/15992276/55678013-73b94e80-58c0-11e9-8ced-d4e750e9ab10.JPG)
+![flow-2](https://user-images.githubusercontent.com/15992276/55678015-76b43f00-58c0-11e9-8a16-fbd2f795f872.JPG)
  
-
-
-
 # Data Model for the User
 
 Each user should have a name, email, password, avatar, data
