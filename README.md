@@ -4,9 +4,9 @@
 
 # Data Model for the User
 
-    Each user should have a name, email, password, avatar, data
+Each user should have a name, email, password, avatar, data
 
-    ```
+  ```
 
 const UserSchema = new Schema({
 name: {
@@ -34,13 +34,13 @@ default: Date.now
 
 # Creating routes for Login and Register Components
 
-    Routes
+Routes
 
 ```
 
 # In server.js
 
-app.use('/api/users',users)
+ app.use('/api/users',users)
 
 # In users.js
 
@@ -60,19 +60,18 @@ const { errors, isValid } = validateLoginInput(req.body);
 
 # Authentication
 
-    A Passport strategy for authenticating with a JSON Web Token.
+A Passport strategy for authenticating with a JSON Web Token.
+This module lets you authenticate endpoints using a JSON web token. It is intended to be used to secure RESTful endpoints without sessions.
 
-    This module lets you authenticate endpoints using a JSON web token. It is intended to be used to secure RESTful endpoints without sessions.
-
-    Reference Link: http://www.passportjs.org/packages/passport-jwt/
+Reference Link: http://www.passportjs.org/packages/passport-jwt/
 
 
 # Login and Register Components
 
 
-    Register
+Register
 
-    The Form creates a new user data and fires an action.
+The Form creates a new user data and fires an action.
 
     ```
     onSubmit = e => {
@@ -90,8 +89,9 @@ const { errors, isValid } = validateLoginInput(req.body);
 
     ```
 
-    # The action sends a request to the API and redirects the    user to the login page if the post request is         successful.
+# The action sends a request to the API and redirects the    user to the login page if the post request is         successful.
 
+```
     axios
 		.post('/api/users/register', userData)
 		.then(res => history.push('/login'))
@@ -101,9 +101,6 @@ const { errors, isValid } = validateLoginInput(req.body);
 
     Login
 
-
-
-````
 
     onSubmit = e => {
     	e.preventDefault();
@@ -118,7 +115,8 @@ const { errors, isValid } = validateLoginInput(req.body);
 
 ```
 
- # Sends the data to the login action. Extracts the data out of the token which was created using Passport JWT strategy.
+# Sends the data to the login action. Extracts the data out of the token which was created using Passport JWT strategy.
+
 
 ```
 
@@ -150,8 +148,7 @@ dispatch(setCurrentUser(decoded));
 ```
 
 
-
-   The action setCurrentUser sets the newState via the reducer to which the action is dispatched in Redux.
+The action setCurrentUser sets the newState via the reducer to which the action is dispatched in Redux.
 
 ```
 
@@ -160,8 +157,10 @@ isAuthenticated: false,
 user: {}
 };
 
+```
 # In the Reducer
 
+```
 switch (action.type) {
 case SET_CURRENT_USER:
 return {
@@ -172,5 +171,7 @@ user: action.payload
 
 ```
 
-    Now the auth state can be used throughout the application to see if the user has logged in for Private Routes.
-```
+
+Now the auth state can be used throughout the application to see if the user has logged in for Private Routes.
+
+
