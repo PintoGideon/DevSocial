@@ -1,6 +1,9 @@
 # Dev Social, A Social Networking App
 
 # Building blocks for each components
+ 
+
+
 
 # Data Model for the User
 
@@ -89,7 +92,7 @@ The Form creates a new user data and fires an action.
 
     ```
 
-# The action sends a request to the API and redirects the    user to the login page if the post request is         successful.
+The action sends a request to the API and redirects the    user to the login page if the post request is successful.
 
 ```
     axios
