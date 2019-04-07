@@ -1,6 +1,8 @@
 # Dev Social, A Social Networking App
 
 # Building blocks for each components
+
+
 ![new doc 2019-04-06 23 57 41-1](https://user-images.githubusercontent.com/15992276/55678466-4375ae00-58c8-11e9-992e-3da9203104f8.jpg)
 
  
