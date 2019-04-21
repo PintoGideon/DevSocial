@@ -10,7 +10,7 @@
 
 Each user should have a name, email, password, avatar, data
 
-  ```
+  ```javascript
 
 const UserSchema = new Schema({
 name: {
@@ -40,7 +40,7 @@ default: Date.now
 
 Routes
 
-```
+```javascript
 
 # In server.js
 
@@ -77,7 +77,7 @@ Register
 
 The Form creates a new user data and fires an action.
 
-    ```
+    ```javascript
     onSubmit = e => {
 		e.preventDefault();
 
@@ -95,7 +95,7 @@ The Form creates a new user data and fires an action.
 
 The action sends a request to the API and redirects the    user to the login page if the post request is successful.
 
-```
+```javascript
     axios
 		.post('/api/users/register', userData)
 		.then(res => history.push('/login'))
@@ -122,7 +122,7 @@ The action sends a request to the API and redirects the    user to the login pag
 # Sends the data to the login action. Extracts the data out of the token which was created using Passport JWT strategy.
 
 
-```
+```javascript
 
 axios
 .post('/api/users/login', userData)
@@ -154,7 +154,7 @@ dispatch(setCurrentUser(decoded));
 
 The action setCurrentUser sets the newState via the reducer to which the action is dispatched in Redux.
 
-```
+```javascript
 
 const initialState = {
 isAuthenticated: false,
